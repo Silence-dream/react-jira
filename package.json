@@ -10,6 +10,7 @@
     "@types/node": "^16.7.13",
     "@types/react": "^17.0.20",
     "@types/react-dom": "^17.0.9",
+    "qs": "^6.10.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
@@ -17,12 +18,13 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start ",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prepare": "husky install",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "json-server": "json-server __json_server_mock__/db.json --watch --port 3051"
   },
   "eslintConfig": {
     "extends": [
@@ -50,6 +52,7 @@
     "commitlint-config-cz": "^0.13.3",
     "cz-conventional-changelog": "^3.3.0",
     "cz-customizable": "^6.3.0",
+    "eslint-config-prettier": "^8.5.0",
     "husky": "^7.0.4",
     "json-server": "^0.17.0",
     "lint-staged": "^12.3.7",
