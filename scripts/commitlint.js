@@ -9,7 +9,7 @@ const message = fs.readFileSync(messageFilePath, "utf-8").trim();
 const commitMessageRegExp =
   /^(✨新增|🐛修复|📝文档|💄格式|♻️重构|⚡️性能|✅测试|🔧工具|⏪回滚)(\(.+\))?: .{1,50}$/;
 
-console.log("message", message);
+console.log("你输入的 commit 信息", message);
 
 // 判断 commit message 是否符合规范
 if (!commitMessageRegExp.test(message)) {
