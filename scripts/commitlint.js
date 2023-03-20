@@ -4,11 +4,12 @@ const fs = require("fs");
 
 // 读取 commit message 文件内容
 const messageFilePath = process.argv[2];
-console.log("你在干什么???", messageFilePath);
 const message = fs.readFileSync(messageFilePath, "utf-8").trim();
 // 定义 commit message 的正则表达式
 const commitMessageRegExp =
   /^(✨新增|🐛修复|📝文档|💄格式|♻️重构|⚡️性能|✅测试|🔧工具|⏪回滚)(\(.+\))?: .{1,50}$/;
+
+console.log("message", message);
 
 // 判断 commit message 是否符合规范
 if (!commitMessageRegExp.test(message)) {
@@ -19,5 +20,5 @@ if (!commitMessageRegExp.test(message)) {
     "✨新增, 🐛修复, 📝文档, 💄格式, ♻️重构, ⚡️性能, ✅测试, 🔧工具, ⏪回滚"
   );
   console.error("scope 可以是任何描述该次提交涉及的范围的字符串");
-  // process.exit(1);
+  process.exit(1);
 }
